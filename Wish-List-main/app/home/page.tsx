@@ -23,7 +23,7 @@ const exampleData = [
 	createCard("Gardening", "Stuff to grow my garden"),
 	createCard("Test", "I give up making more examples"),
 	createCard("Test", "I give up making more examples"),
-	createCard("Test", "I give up making more examples"),
+	createCard("Test", "Component Test"),
 ];
 
 export default function HomePage() {
@@ -70,7 +70,7 @@ export default function HomePage() {
 								<CardActions>
 									<Link
 										href={{
-											pathname: "/list",
+											pathname: "list",
 											query: card,
 										}}
 									>

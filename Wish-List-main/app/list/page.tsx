@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
@@ -34,6 +34,7 @@ function createItem(id: string, name: string, notes: string, link: string) {
   return { id, name, notes, link };
 }
 
+
 const ExampleData: GridRowsProp = [
   createItem(randomId(), "Taco", "Im Hungry", "https://www.tacobell.com/"),
   createItem(
@@ -45,6 +46,7 @@ const ExampleData: GridRowsProp = [
 ];
 
 export default function List() {
+
   const searchParams: ReadonlyURLSearchParams | null = useSearchParams();
 
   const [rows, setRows] = React.useState(ExampleData);
@@ -197,14 +199,16 @@ export default function List() {
           }}
         />
       </Box>
-
       <Link
         href={{
-          pathname: "/home",
+          pathname: "home",
         }}
       >
         <Button size="small">Back</Button>
       </Link>
+      <div className="Mui-selected">
+        <div className="actions"></div>
+      </div>
     </div>
   );
 }

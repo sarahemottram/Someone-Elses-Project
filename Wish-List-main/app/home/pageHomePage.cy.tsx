@@ -7,7 +7,7 @@ describe("<HomePage />", () => {
     cy.mount(<HomePage />);
   });
 
-  xit("Allows users to create a new list", () => {
+  it("Allows users to create a new list", () => {
     cy.mount(<HomePage />);
     cy.get(".MuiDivider-wrapper > .MuiButtonBase-root").click();
     cy.get(":nth-child(3) > .MuiInputBase-root > #outlined-basic")
