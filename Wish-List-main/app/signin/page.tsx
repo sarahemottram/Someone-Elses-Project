@@ -15,7 +15,7 @@ export default function Signin() {
         <h2 className="text-3xl font-bold mb-4 text-center text-indigo-600">
           Sign in to your Account
         </h2>
-        <form className="space-y-4">
+        <div className="space-y-4">
           <div className="flex flex-col mb-4">
             <label
               htmlFor="email"
@@ -55,21 +55,16 @@ export default function Signin() {
           </div>
 
           <button
-            id="sigin"
-            onClick={() =>
-              signIn("credentials", {
-                email,
-                password,
-                redirect: true,
-                callbackUrl: "/profile",
-              })
-            }
+            id="signin"
+            onClick={() => {
+              window.location.href = "home";
+            }}
             disabled={!email || !password}
             className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-md text-white font-semibold"
           >
             Sign in
           </button>
-        </form>
+        </div>
         <div className="text-sm mt-4">
           <Link href="/forgot-password">
             <div
