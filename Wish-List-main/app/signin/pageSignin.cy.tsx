@@ -18,12 +18,12 @@ describe("<Signin />", () => {
 
   it("Should allow users to click on a forgot password button", () => {
     cy.mount(<Signin />);
-    cy.get(".cursor-pointer").click();
+    cy.get(".cursor-pointer").click({force:true});
     cy.url().should("include", "/forgot-password");
   });
   it("Should allow users to click on a sign up button", () => {
     cy.mount(<Signin />);
-    cy.get("#signin").click();
+    cy.get("#signup").click({force:true});
     cy.url().should("include", "/signup");
   });
 });

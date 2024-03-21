@@ -66,7 +66,7 @@ export default function Signin() {
           </button>
         </div>
         <div className="text-sm mt-4">
-          <Link href="/forgot-password">
+          <Link href="forgot-password">
             <div
               className="cursor-pointer font-semibold text-indigo-400 hover:text-indigo-300"
             >
@@ -75,8 +75,8 @@ export default function Signin() {
           </Link>
         </div>
         <p className="mt-6 text-center text-sm text-gray-700">
-          <Link href="/signup">
-            <button className="font-semibold text-indigo-600 hover:text-indigo-700">
+          <Link href="signup">
+            <button id="signup" className="font-semibold text-indigo-600 hover:text-indigo-700">
               Create New Account
             </button>
           </Link>
